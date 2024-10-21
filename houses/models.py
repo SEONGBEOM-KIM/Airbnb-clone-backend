@@ -1,7 +1,7 @@
 from django.db import models
 
-class House(models.Model):
 
+class House(models.Model):
     """
     Model Definition for House
     """
