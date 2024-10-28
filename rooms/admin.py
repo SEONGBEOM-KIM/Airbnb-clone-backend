@@ -22,6 +22,12 @@ class RoomAdmin(admin.ModelAdmin):
         "amenities",
     )
 
+    search_fields = (
+        "name",  # __contains / =name : exact
+        "price",  # ^price : startswith
+        "owner__username",  # using foreign key
+    )
+
     def total_amenities(self, room):
         return room.amenities.count()
 
