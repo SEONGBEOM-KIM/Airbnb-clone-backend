@@ -5,7 +5,16 @@ class CategorySerializer(serializers.Serializer):
 
     # Explaining to Serializer: what model have, what type it is
 
-    pk = serializers.IntegerField()
-    name = serializers.CharField(required=True)
-    kind = serializers.CharField()
-    created_at = serializers.DateTimeField()
+    pk = serializers.IntegerField(
+        read_only=True,
+    )
+    name = serializers.CharField(
+        required=True,
+        max_length=50,
+    )
+    kind = serializers.CharField(
+        max_length=15,
+    )
+    created_at = serializers.DateTimeField(
+        read_only=True,
+    )
