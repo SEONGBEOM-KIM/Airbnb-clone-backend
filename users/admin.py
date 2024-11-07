@@ -20,7 +20,7 @@ class CustomUserAdmin(UserAdmin):
                     "email",
                     "is_host",
                     "gender",
-                    "lanaguage",
+                    "language",
                     "currency",
                 ),
                 "classes": ("wide",),

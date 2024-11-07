@@ -37,7 +37,7 @@ class User(AbstractUser):
         max_length=10,
         choices=GenderChoices.choices,
     )
-    lanaguage = models.CharField(
+    language = models.CharField(
         max_length=2,
         choices=LanguageChoices.choices,
     )
